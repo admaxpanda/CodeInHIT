@@ -51,6 +51,7 @@ void QAQ()
         {
             printf("请输入字段长度：");
             scanf("%d",&lie[i].changdu);
+            lie[i].changdu++;
         }
         else lie[i].changdu=4;
         printf("一个字段属性输入完毕!\n");
@@ -99,6 +100,8 @@ void QAQ()
         printf("\n");
     }
     system("pause");
+    free(lie);
+    free(w);
 }
 int main()
 {
