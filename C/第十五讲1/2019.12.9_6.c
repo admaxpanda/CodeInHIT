@@ -2,7 +2,7 @@
 int main()
 {
     char ch;
-    FILE *in=fopen("C”Ô—‘.png","rb"),*out=fopen("QWQ.png","wb");
+    FILE *in=fopen("CËØ≠Ë®Ä.png","rb"),*out=fopen("QWQ.png","wb");
     while(!feof(in))
     {
         ch=fgetc(in);
