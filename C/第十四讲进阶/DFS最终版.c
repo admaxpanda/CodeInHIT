@@ -1,3 +1,7 @@
+//因为产生乱码的缘故
+//所以用00代替墙壁
+//@@代替方块，##代替笑脸
+//dei
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
@@ -27,7 +31,10 @@ void draw(struct pos p)
     {
         for(int k=1;k<=8;k++)
             if(i==p.x&&k==p.y)
+                if(p.x==8&&p.y==7)
                 printf("##");
+                else
+                printf("@@");
             else if(map[i][k]==1)
                 printf("00");
             else printf("  ");
@@ -102,4 +109,6 @@ int main()
         }
         p=top;
     }
+    printf("Arrive at the checkpoint, we're safe............temporary");
+    return 0;
 }
