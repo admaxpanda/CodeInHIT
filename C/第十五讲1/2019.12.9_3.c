@@ -10,5 +10,6 @@ int main()
             fputc(ch,out);
         ch=fgetc(in);
     }
+    fclose(in),fclose(out);
     return 0;
 }
