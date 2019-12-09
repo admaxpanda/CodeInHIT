@@ -11,7 +11,7 @@ int main()
         else oth++;
         c=fgetc(in);
     }
-    printf("×Ö·û£º%d Êý×Ö£º%d ÆäËû£º%d",ch,num,oth);
+    printf("å­—ç¬¦ï¼š%d æ•°å­—ï¼š%d å…¶ä»–ï¼š%d",ch,num,oth);
     fclose(in);
     return 0;
 }
