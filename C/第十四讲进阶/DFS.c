@@ -45,6 +45,7 @@ int main()
     stack->x=1,stack->y=2;
     while(p!=NULL)
     {
+        int qaq=0;
         draw(*p);
         if(p->x==8&&p->y==7)
             break;
@@ -58,6 +59,7 @@ int main()
                 stack->x=p->x+1,stack->y=p->y;
                 top=stack;
                 vis[p->x+1][p->y]=1;
+                qaq++;
             }
         }
         if(map[p->x-1][p->y]==0)
@@ -70,6 +72,7 @@ int main()
                 stack->x=p->x-1,stack->y=p->y;
                 top=stack;
                 vis[p->x-1][p->y]=1;
+                qaq++;
             }
         }
         if(map[p->x][p->y+1]==0)
@@ -82,6 +85,7 @@ int main()
                 stack->x=p->x,stack->y=p->y+1;
                 top=stack;
                 vis[p->x][p->y+1]=1;
+                qaq++;
             }
         }
         if(map[p->x][p->y-1]==0)
@@ -94,8 +98,10 @@ int main()
                 stack->x=p->x,stack->y=p->y-1;
                 top=stack;
                 vis[p->x][p->y-1]=1;
+                qaq++;
             }
         }
+        if(!qaq)draw(*(p->lst));
         p=top;
         free(fre);
         fre=p;
